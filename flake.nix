@@ -17,7 +17,6 @@
           in
           pkgs.mkShell {
             buildInputs = [
-              pkgs.rustup
             ];
           };
       };
