@@ -8,6 +8,8 @@
         // copilot
         "GitHub.copilot",
         "GitHub.copilot-chat",
+        // editor
+        "albert.TabOut",
         // docker
         "ms-azuretools.vscode-containers",
         // github
