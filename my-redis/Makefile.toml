@@ -3,6 +3,9 @@ install_crate = "mini-redis"
 command = "mini-redis-server"
 
 [tasks.run]
-dependencies = ["mini-redis-server"]
-command = "cargo run"
+command = "cargo"
+args = ["run"]
 watch = true
+
+[tasks.all]
+run_task = [{name = ["install-mini-redis-server", "run"], parallel = true}]

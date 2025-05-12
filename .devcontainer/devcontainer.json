@@ -33,5 +33,5 @@
     "cpus": 2
   },
   "postCreateCommand": "cargo install cargo-make",
-  "postAttachCommand": "cd my-redis && cargo make"
+  "postAttachCommand": "cd my-redis && cargo make all"
 }
