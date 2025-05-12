@@ -1,0 +1,8 @@
+[tasks.install-mini-redis-server]
+install_crate = "mini-redis"
+command = "mini-redis-server"
+
+[tasks.run]
+dependencies = ["mini-redis-server"]
+command = "cargo run"
+watch = true

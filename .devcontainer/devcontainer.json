@@ -32,5 +32,6 @@
   "hostRequirements": {
     "cpus": 2
   },
-  "postCreateCommand": "cargo install mini-redis"
+  "postCreateCommand": "cargo install cargo-make",
+  "postAttachCommand": "cd my-redis && cargo make"
 }
