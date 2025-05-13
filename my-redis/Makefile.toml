@@ -8,4 +8,11 @@ args = ["run"]
 watch = true
 
 [tasks.all]
-run_task = [{name = ["install-mini-redis-server", "run"], parallel = true}]
+run_task = [{ name = ["install-mini-redis-server", "run"], parallel = true }]
+
+[tasks.hello-redis]
+command = "cargo"
+args = ["run", "--example", "hello-redis"]
+
+[tasks.hello-redis-all]
+run_task = [{ name = ["run", "hello-redis"], parallel = true }]

@@ -30,8 +30,8 @@
     "ghcr.io/devcontainers/features/rust:1": {}
   },
   "hostRequirements": {
-    "cpus": 2
+    "cpus": 4
   },
   "postCreateCommand": "cargo install cargo-make",
-  "postAttachCommand": "cd my-redis; cargo make all"
+  "postAttachCommand": "cd my-redis; cargo make hello-redis-all"
 }
