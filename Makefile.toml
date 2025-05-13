@@ -1,3 +1,6 @@
+[env]
+CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = true
+
 [tasks.install-mini-redis-server]
 install_crate = "mini-redis"
 command = "mini-redis-server"
@@ -11,6 +14,7 @@ watch = true
 run_task = [{ name = ["install-mini-redis-server", "run"], parallel = true }]
 
 [tasks.hello-redis]
+cwd = "my-redis"
 command = "cargo"
 args = ["run", "--example", "hello-redis"]
 
