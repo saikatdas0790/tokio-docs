@@ -1,22 +1,18 @@
-[env]
-CARGO_MAKE_EXTEND_WORKSPACE_MAKEFILE = true
+[config]
+default_to_workspace = false
 
-[tasks.install-mini-redis-server]
-install_crate = "mini-redis"
-command = "mini-redis-server"
+[tasks.default]
+clear = true
+dependencies = ["run-my-redis"]
 
-[tasks.run]
+[tasks.run-my-redis]
+cwd = "./my-redis"
 command = "cargo"
 args = ["run"]
 watch = true
 
-[tasks.all]
-run_task = [{ name = ["install-mini-redis-server", "run"], parallel = true }]
-
-[tasks.hello-redis]
-cwd = "my-redis"
-command = "cargo"
-args = ["run", "--example", "hello-redis"]
-
-[tasks.hello-redis-all]
-run_task = [{ name = ["run", "hello-redis"], parallel = true }]
+# [tasks.my-redis]
+# cwd = "./my-redis"
+# command = "cargo"
+# args = ["run", "--example", "hello-redis"]
+# watch = true

@@ -32,5 +32,5 @@
   "hostRequirements": {
     "cpus": 4
   },
-  // "postAttachCommand": "cargo make hello-redis-all"
+  "postCreateCommand": "cargo install cargo-make"
 }
