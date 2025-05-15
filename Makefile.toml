@@ -10,9 +10,3 @@ cwd = "./my-redis"
 command = "cargo"
 args = ["run"]
 watch = true
-
-# [tasks.my-redis]
-# cwd = "./my-redis"
-# command = "cargo"
-# args = ["run", "--example", "hello-redis"]
-# watch = true
